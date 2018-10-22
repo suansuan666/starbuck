@@ -1,0 +1,361 @@
+@media (min-width:1025px){
+.nav{
+    position: fixed;
+    width:30%;
+    top:0;
+    bottom: 0;
+    left:0; 
+}
+.overlay{
+    width:30%;
+}
+.body{
+    height:calc(100% - 48px);/*一定要在减号两边写上空格，不然整体会被解析成字符串*/
+    position:relative;
+    
+
+}
+.content{
+    width:70%;
+    margin-left:30%;
+}
+.nav .body-content{
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+} /* 这一块的定位要写在min-width里*/
+.nav-menu{
+    max-width: calc(100% - 72px);  /*星巴克菜单特别处*/
+    float: left;
+}
+.wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.tmall ul> *{
+    box-sizing: border-box;
+    clear: none;
+    float: left;
+    width:25%;
+}
+}
+@media (max-width:1025px){
+    .nav{
+        right:0;
+        width:100%;
+    }
+}
+@media (max-width:640px){
+    .nav .header,.nav .login{
+        display: none;
+    }
+    .pc{
+        display: none !important;
+    }
+    .mobile{
+        display: block !important;
+    }
+}
+@media (min-width:641px){
+    .pc{
+        display: block !important;
+    }
+    .mobile{
+        display: none !important;
+    }
+}
+@media (max-width:1024px) and (min-width:641px){
+    .nav .header{
+        padding:16px;
+    }
+    .nav .body{
+        padding:0 16px;
+    }
+    .overlay.active{
+        height:100%;
+        width:100%;
+    }
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+html{
+    font-size: 62.5% !important;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+body{
+    color: rgba(0, 0, 0, 0.87);
+    background-color: #cccc;
+    font-size: 1.6rem;
+    font-weight: 400px;
+}
+
+.clearfix::after{
+    display: block;
+    content:"";
+    clear: both;
+}
+.nav{
+    background-color: #fff;
+}
+.header li{
+    float: left;  
+    padding:5px 10px 5px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.header{
+    height:48px;
+    padding:24px;
+}
+.nav a{
+    font-size: 1.6rem;
+}
+
+.logo{
+    width:36px;
+    height:36px;
+    float: left; 
+    /* vertical-align: middle;  */
+}
+
+.hab,.close{
+    float: right;
+    padding-top: 5px;
+}
+.slogan{
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.overlay .body{
+    padding-left:84px;
+    padding-right:24px;
+    letter-spacing: 0.4px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    overflow: scroll;
+}
+.overlay{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    background-color: #ffffff;
+    visibility: hidden;
+}
+.overlay ul{
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 120%; 
+}
+.overlay li{
+    padding:8px 0;
+}
+.overlay.active{
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s linear;
+}
+.green{
+    color: #00A862;  
+}
+button{
+    background: none;
+    border: 1px solid #00A862;
+    border-radius: 48px;
+    padding:2px 12px;
+    margin-top:5px;
+}
+.account{
+    height:30px;
+    float: left;
+    display: block;
+    margin-right:6px;
+}
+.login{
+    height:30px;
+}
+.login-L{
+    float: left;
+    margin-right: 24px;
+    padding: 3px 0;
+    height:30px;
+    line-height:30px;
+    width:70px;
+}
+.footer{
+    color: rgba(0, 0, 0, 0.12);
+    display: inline-block !important;
+    font-size: 14px;
+    line-height: 160%;
+    margin-top: 12px;
+}
+.footer a{
+    color: rgba(0, 0, 0, 0.38);
+}
+/*左边部门到这截止*/
+
+/*下面是右边部分*/
+.main-slider{
+    width:885px;
+    height:407px;
+    position: relative;
+    overflow: hidden;
+
+}
+.slider-list{
+    width:2655px;
+}
+.slider-list li{
+    float: left;
+    width:885px;
+   
+}
+.slider-list img{
+    width:100%;
+}
+.arrow{
+    position: absolute;
+    top:50%;
+    right:50px;
+}
+.promotion{
+    padding:24px 0;
+}
+.promotion img{
+    float: left;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    max-width:100%;
+}
+.wrapper{
+    box-sizing: border-box;
+    margin:0 auto;
+    max-width: 768px;
+}
+.promotion .wrapper> *{
+    width:33.333333%;
+    float: left;
+    padding:12px;
+    box-sizing: border-box;
+}
+.programe{
+    background-color: #fff;
+}
+.wrapper{
+    padding:0 24px;
+    position: relative;
+}
+.programe .wrapper> *{
+    width:50%;
+    float: left;
+   
+    
+}
+.programe .left{
+    padding:36px 0;
+}
+.programe h1{
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+.programe img{
+    display: block;
+    top:50%;
+    transform: translateY(-50%);
+    position: absolute;
+    height:72px;
+    right:0;
+}
+.programe p{
+    color: rgba(0, 0, 0, 0.56);
+    margin-bottom: 24px;
+}
+.more{
+    color: #C2A661
+}
+.btn{
+    border: 1px solid #00A862;
+    border-radius: 48px;
+    box-sizing: border-box;
+    color: #00A862;
+    font-weight: 500;
+    outline: none;
+    overflow: hidden;
+    padding: 6px 18px;
+}
+.tmall{
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+.center{
+    text-align: center;
+}
+h1{
+    margin-bottom: 18px;
+    font-size: 2.2rem;
+}
+.intro{
+    color: rgba(0, 0, 0, 0.56);
+}
+.tmall ul{
+    padding-top: 48px !important;
+    margin:-12px;
+}
+
+.tmall ul li{
+    padding: 12px !important;
+    float: left;
+}
+.tmall a{
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    position: relative;
+    padding: 0 6px;
+    text-align: center;
+    width: 100%;
+}
+.tmall img{
+    margin-top: -36px;
+    height: 72px;
+}
+.tmall li:nth-child(1) img{
+    margin-top: -48px;
+    height: 108px;
+    margin-bottom: -24px;
+}
+.title{
+    color: rgba(0, 0, 0, 0.87);
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 1.6rem;
+}
+.t-slogan{
+    color: rgba(0, 0, 0, 0.56) !important;
+    margin-bottom: 18px;
+    font-size: 1.4rem;
+}
+
+.t-more{
+    font-size: 1.2rem;
+    color: #C2A661;
+    font-weight: 400;
+    opacity: 0.7;
+    text-transform: none;
+    margin-bottom: 24px;
+}
