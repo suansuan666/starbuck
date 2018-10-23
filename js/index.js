@@ -31,7 +31,11 @@ function change(index){
                 globalIndex=0;
             }
         }
+        console.log("aa");
+        
     },16)
+    console.log("cc");
+    
 }
 
 
@@ -43,6 +47,8 @@ aRrow.onclick=function(){
 setInterval(function(){
     if(isRun &&isTimer){
         change(globalIndex++);
+        console.log("bb");
+        
     }
 },1500)
 
