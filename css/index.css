@@ -102,6 +102,12 @@
     .tmall .grid> *:nth-child(2n+1){ 
         clear: left;  /*??*/
     }
+    .foot-menu{
+        bottom: 0px;
+        position: fixed;
+        width:100%;
+        background-color: #fff;
+    }
 }
 @media (min-width:641px){
     .pc{
@@ -123,6 +129,9 @@
     .programe .left{
         padding:36px 0;
     }
+    .foot-menu{
+        display: none;
+    }
    
 }
 @media (max-width:1024px) and (min-width:641px){
@@ -135,6 +144,13 @@
     .overlay.active{
         height:100%;
         width:100%;
+        z-index:10;
+    }
+    .tmall ul> *{
+        box-sizing: border-box;
+        clear: none;
+        float: left;
+        width:25%;
     }
 }
 
@@ -155,10 +171,11 @@ a{
 }
 body{
     color: rgba(0, 0, 0, 0.87);
-    background-color: #cccc;
+    background-color: #f7f7f7;
     font-size: 1.6rem;
     font-weight: 400px;
 }
+
 
 .clearfix::after{
     display: block;
@@ -204,7 +221,7 @@ body{
     letter-spacing: 0.4px;
     font-size: 1.6rem;
     font-weight: 400;
-    overflow: scroll;
+    
 }
 .overlay{
     position: fixed;
@@ -213,6 +230,7 @@ body{
     left:0;
     background-color: #ffffff;
     visibility: hidden;
+    overflow-y: auto;
 }
 .overlay ul{
     font-weight: 700;
@@ -243,9 +261,7 @@ button{
     display: block;
     margin-right:6px;
 }
-.login{
-    height:30px;
-}
+
 .login-L{
     float: left;
     margin-right: 24px;
@@ -253,6 +269,10 @@ button{
     height:30px;
     line-height:30px;
     width:70px;
+}
+.login{
+    margin-bottom: 12px;
+
 }
 .footer{
     color: rgba(0, 0, 0, 0.12);
@@ -272,6 +292,8 @@ button{
     height:407px;
     position: relative;
     overflow: hidden;
+   margin-top:-24px;
+
 }
 .slider-list{
     width:2655px;
@@ -483,4 +505,26 @@ h1{
 }
 .container{
     overflow: hidden;
+}
+.foot-menu .wrapper{
+    padding:0 6px;
+}
+.foot-menu li{
+    float: left;
+    width:20%;
+}
+.foot-menu a{
+    display: block;
+    text-align: center;
+    padding:6px 4px;
+    line-height: 1;
+    font-size: 1.2rem;
+
+}
+.name-1{
+    color: #00A862;
+}
+.name{
+    color: rgba(0, 0, 0, 0.56);
+
 }
