@@ -12,8 +12,6 @@
 .body{
     height:calc(100% - 48px);/*一定要在减号两边写上空格，不然整体会被解析成字符串*/
     position:relative;
-    
-
 }
 .content{
     width:70%;
@@ -45,6 +43,14 @@
         right:0;
         width:100%;
     }
+    .programe .wrapper-mobile{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .programe .wrapper{
+        padding:0 16px;
+    }
+    
 }
 @media (max-width:640px){
     .nav .header,.nav .login{
@@ -56,6 +62,46 @@
     .mobile{
         display: block !important;
     }
+    .promotion .wrapper> *{
+        box-sizing: border-box;
+        float: left;
+        width:100%;
+    }
+    .programe .wrapper> *{
+        box-sizing: border-box;
+        float: left;
+        width:100%;
+    }
+    .programe .wrapper{
+        text-align: center;
+    }
+    .programe .right{
+        height: 160px;
+        padding-bottom: 24px;
+    }
+    .programe .right img{
+        position: relative;
+        display: inline;
+    }
+    .programe .left{
+        padding-top: 24px;
+        padding-bottom: 0;
+    }
+    .programe .more{
+        display: block;
+        margin-top:10px;
+    }
+    .tmall .grid> *{
+        box-sizing: border-box;
+        float: left;
+        width:50%;
+    }
+    .tmall .first{
+        margin-bottom: 48px;
+    }
+    .tmall .grid> *:nth-child(2n+1){ 
+        clear: left;  /*??*/
+    }
 }
 @media (min-width:641px){
     .pc{
@@ -64,6 +110,20 @@
     .mobile{
         display: none !important;
     }
+    .promotion .wrapper> *{
+        width:33.333333%;
+        float: left;
+        padding:12px;
+        box-sizing: border-box;
+    }
+    .programe .wrapper> *{
+        width:50%;
+        float: left;    
+    }
+    .programe .left{
+        padding:36px 0;
+    }
+   
 }
 @media (max-width:1024px) and (min-width:641px){
     .nav .header{
@@ -212,7 +272,6 @@ button{
     height:407px;
     position: relative;
     overflow: hidden;
-
 }
 .slider-list{
     width:2655px;
@@ -233,6 +292,9 @@ button{
 .promotion{
     padding:24px 0;
 }
+.promotion .wrapper> *{
+    padding: 12px;
+}
 .promotion img{
     float: left;
     box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.12);
@@ -245,12 +307,7 @@ button{
     max-width: 768px;
     width:100%;
 }
-.promotion .wrapper> *{
-    width:33.333333%;
-    float: left;
-    padding:12px;
-    box-sizing: border-box;
-}
+
 .programe{
     background-color: #fff;
 }
@@ -258,20 +315,12 @@ button{
     padding:0 24px;
     position: relative;
 }
-.programe .wrapper> *{
-    width:50%;
-    float: left;
-   
-    
-}
-.programe .left{
-    padding:36px 0;
-}
 .programe h1{
     font-size: 2.2rem;
     font-weight: 400;
     margin-bottom: 18px;
 }
+
 .programe img{
     display: block;
     top:50%;
