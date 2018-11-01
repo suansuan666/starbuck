@@ -140,6 +140,7 @@
     }
     .nav .body{
         padding:0 16px;
+        padding-bottom: 30px;
     }
     .overlay.active{
         height:100%;
@@ -160,6 +161,7 @@
 }
 html{
     font-size: 62.5% !important;
+    
 }
 li{
     list-style: none;
@@ -174,6 +176,9 @@ body{
     background-color: #f7f7f7;
     font-size: 1.6rem;
     font-weight: 400px;
+}
+body.active{
+    overflow: hidden;
 }
 
 

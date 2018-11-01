@@ -1,5 +1,6 @@
 $(".hab").on("click",function(){
     $(".overlay").addClass("active");
+    $("body").addClass("active");
     console.log("aa");
     return false;
     
@@ -7,6 +8,7 @@ $(".hab").on("click",function(){
 })
 $(".close").on("click",function(){
     $(".overlay").removeClass("active");
+    $("body").removeClass("active");
     console.log("bb");
     
 })
