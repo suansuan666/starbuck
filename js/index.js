@@ -13,51 +13,62 @@ $(".close").on("click",function(){
     
 })
 
-var globalIndex=0;
-var timer,isRun=true,isTimer=true;
-var aSlist=document.querySelector(".slider-list");
-var aMain=document.querySelector(".main-slider");
-var aRrow=document.querySelector(".arrow");
-
-function change(index){
-    isRun=false;
-    var direction=1;
-    index > globalIndex ?direction=1 :direction=-1;
-    globalIndex=index;
-    timer=setInterval(function(){
-        aSlist.style.left=aSlist.offsetLeft -direction * 10 +"px";
-        if(aSlist.offsetLeft == -index * 885){
-            clearInterval(timer);
-            if(index==2){
-                aSlist.style.left=0;
-                globalIndex=0;
-            }
-        }
-        console.log("aa");
-        
-    },16)
-    console.log("cc");
-    
-}
-
-
-aRrow.onclick=function(){
-    if(isRun){
-        change(globalIndex++);
-    }
-}
+var Width=$(".slider-list img").width();
+var nowIndex=0;
 setInterval(function(){
-    if(isRun &&isTimer){
-        change(globalIndex++);
-        console.log("bb");
-        
+    if(nowIndex==2){
+        nowIndex=0;
     }
-},1500)
+    $(".slider-list").css({ 
+        transform:'translateX(-'+Width * (nowIndex++)+'px)'
+    })
+}
+,1500)
+$("#Arrow").on("click",function(){ 
+      nowIndex ++;
+      var runLeft = $("li").width() * nowIndex;
+      if(nowIndex==2){
+        nowIndex=0;
+    }
+      $(".slider-list").css({
+        transform:'translateX('+(-runLeft)+'px)',
+        transition:'all 1s ease'
+      });
+    })
 
-aMain.onmouseover=function(){
-    isTimer=false;
+
+
+
+/*下面是横向滚动*/ 
+var scrollBar=$(".scroll-item")[0];
+var timer=null;
+$("#next").on("click",function(){
+    run("left");
+});
+$("#pre").on("click",function(){
+    run("right");
+});
+function run(dire){
+    var scrollLeft=dire =="left" ?scrollBar.scrollLeft +300 :scrollBar.scrollLeft -300;
+    $(".scroll-item").animate({
+        scrollLeft:scrollLeft
+    },500,function(){
+        showArrow();
+    })
 }
-aMain.onmouseout=function(){
-    isTimer=true;
+function showArrow(){
+    $("#pre").add("#next").show();
+    if(scrollBar.scrollLeft <=0){
+        $("#pre").hide();
+    }
+    else if(scrollBar.scrollLeft>=scrollBar.scrollWidth -scrollBar.clientWidth){
+        $("#next").hide();
+    }
 }
+$(".scroll-item").on("scroll",function(){
+    if($(this).data("timer")){
+        clearTimeout($(this).data("timer"));
+    }
+    $(this).data("timer",setTimeout(function(){showArrow()},1000));
+})
 

@@ -116,6 +116,31 @@
     .mobile{
         display: none !important;
     }
+    .main-slider{
+        width:100%;
+        height:407px;
+        position: relative;
+        overflow: hidden;
+       transition: all 1.5s ease;
+    
+    }
+    .slider-list{
+        width:2655px;
+        position: absolute;
+    }
+    .slider-list li{
+        float: left;
+        width:885px;  
+       
+    }
+    .slider-list img{
+        width:100%;
+    }
+    .arrow{
+        position: absolute;
+        top:50%;
+        right:50px;
+    }
     .promotion .wrapper> *{
         width:33.333333%;
         float: left;
@@ -292,30 +317,7 @@ button{
 /*左边部门到这截止*/
 
 /*下面是右边部分*/
-.main-slider{
-    width:885px;
-    height:407px;
-    position: relative;
-    overflow: hidden;
-   margin-top:-24px;
 
-}
-.slider-list{
-    width:2655px;
-}
-.slider-list li{
-    float: left;
-    width:885px;
-   
-}
-.slider-list img{
-    width:100%;
-}
-.arrow{
-    position: absolute;
-    top:50%;
-    right:50px;
-}
 .promotion{
     padding:24px 0;
 }
@@ -334,6 +336,9 @@ button{
     max-width: 768px;
     width:100%;
 }
+.main-slider{
+    margin-top:-24px;
+}
 
 .programe{
     background-color: #fff;
@@ -341,6 +346,9 @@ button{
 .wrapper{
     padding:0 24px;
     position: relative;
+}
+.s-wrapper{
+    padding-left: 24px;
 }
 .programe h1{
     font-size: 2.2rem;
@@ -470,6 +478,9 @@ h1{
 .coffeehouse .left{
     left:24px;
 }
+.coffeehouse .right{
+    right:24px;
+}
 .coffeehouse .arrow img{
     margin: 3px auto;
     width: 18px;
@@ -505,8 +516,14 @@ h1{
     margin-left:12px;
     padding-left:18px;
 }
+.scroll{
+    width:100%;
+    margin-bottom: -17px;
+}
 .scroll-item{
-    width:1239px;
+    white-space: nowrap;
+    overflow-x: scroll;
+
 }
 .container{
     overflow: hidden;
